@@ -25,7 +25,7 @@ class LoginCrackerApp(QMainWindow):
         self.setup_context_menus()
         
     def initUI(self):
-        self.setWindowTitle('CipherBreak')
+        self.setWindowTitle('CipherBreak by:t00ls.Com')
         self.setGeometry(100, 100, 1200, 800)  # 增大窗口尺寸
         self.setStyleSheet("""
             QMainWindow {
@@ -136,7 +136,7 @@ class LoginCrackerApp(QMainWindow):
         header_layout = QHBoxLayout()
         
         # 标题标签
-        title_label = QLabel("CipherBreak")
+        title_label = QLabel("CipherBreak By:t00ls.Com")
         title_label.setStyleSheet("""
             font-size: 24px;
             font-weight: bold;
