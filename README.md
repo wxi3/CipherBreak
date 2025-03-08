@@ -2,6 +2,7 @@
 
 
 CipherBreak 是一款功能强大的验证码爆破工具，专为安全测试人员设计，可以帮助您在进行安全测试时绕过验证码保护机制，自动化测试登录系统的安全性。
+![image](https://github.com/user-attachments/assets/160d5448-4609-4326-b5d5-f2e793b03329)
 
 ## 功能特点
 
