@@ -163,18 +163,21 @@ class LoginCrackerApp(QMainWindow):
         # 协议选择
         protocol_layout = QHBoxLayout()
         self.protocol_label = QLabel('协议:')
+        self.protocol_label.setFixedWidth(60)  # 固定标签宽度
         self.protocol_combo = QComboBox()
         self.protocol_combo.addItems(['HTTP', 'HTTPS'])
         self.protocol_combo.setCurrentText('HTTP')
+        self.protocol_combo.setFixedWidth(80)  # 设置协议下拉框更短
         protocol_layout.addWidget(self.protocol_label)
         protocol_layout.addWidget(self.protocol_combo)
         
         # 字典选择
         dict_layout = QHBoxLayout()
         self.dict_label = QLabel('字典:')
+        self.dict_label.setFixedWidth(60)  # 固定标签宽度
         self.dict_combo = QComboBox()
         self.dict_combo.setEditable(True)
-        self.dict_combo.setMinimumWidth(200)
+        self.dict_combo.setMinimumWidth(300)  # 增加字典下拉框的最小宽度
         self.browse_btn = QPushButton('浏览...')
         self.browse_btn.clicked.connect(self.browse_dictionary)
         dict_layout.addWidget(self.dict_label)
@@ -184,9 +187,11 @@ class LoginCrackerApp(QMainWindow):
         # 参数设置
         param_layout = QHBoxLayout()
         self.target_label = QLabel('爆破参数:')
+        self.target_label.setFixedWidth(80)  # 固定标签宽度
         self.target_param = QComboBox()
         self.target_param.setEditable(True)
         self.captcha_label = QLabel('验证码参数:')
+        self.captcha_label.setFixedWidth(90)  # 固定标签宽度
         self.captcha_param = QComboBox()
         self.captcha_param.setEditable(True)
         param_layout.addWidget(self.target_label)
@@ -203,6 +208,7 @@ class LoginCrackerApp(QMainWindow):
         # 成功关键词设置
         success_layout = QHBoxLayout()
         self.success_label = QLabel('成功关键词:')
+        self.success_label.setFixedWidth(90)  # 固定标签宽度
         self.success_keywords = QComboBox()
         self.success_keywords.setEditable(True)
         self.success_keywords.addItems(["success", "登录成功", "登陆成功"])
@@ -212,6 +218,7 @@ class LoginCrackerApp(QMainWindow):
         # 验证码错误关键词设置
         captcha_error_layout = QHBoxLayout()
         self.captcha_error_label = QLabel('验证码错误关键词:')
+        self.captcha_error_label.setFixedWidth(120)  # 固定标签宽度
         self.captcha_error_keywords = QComboBox()
         self.captcha_error_keywords.setEditable(True)
         self.captcha_error_keywords.addItems(["验证码不正确", "验证码错误", "验证码已失效"])
@@ -221,6 +228,7 @@ class LoginCrackerApp(QMainWindow):
         # 延迟设置
         delay_layout = QHBoxLayout()
         self.delay_label = QLabel('请求延迟(秒):')
+        self.delay_label.setFixedWidth(90)  # 固定标签宽度
         self.delay_combo = QComboBox()
         self.delay_combo.setEditable(True)
         self.delay_combo.addItems(["0", "0.5", "1", "2", "3", "5"])
@@ -233,16 +241,21 @@ class LoginCrackerApp(QMainWindow):
         self.parse_btn = QPushButton('解析数据包')
         self.parse_btn.setIcon(QIcon.fromTheme("document-properties"))
         self.parse_btn.clicked.connect(self.parse_packets)
+        self.parse_btn.setFixedWidth(120)  # 固定按钮宽度
         
         self.start_btn = QPushButton('开始爆破')
         self.start_btn.setIcon(QIcon.fromTheme("media-playback-start"))
         self.start_btn.clicked.connect(self.start_cracking)
+        self.start_btn.setFixedWidth(120)  # 固定按钮宽度
         
         self.stop_btn = QPushButton('停止')
         self.stop_btn.setIcon(QIcon.fromTheme("media-playback-stop"))
         self.stop_btn.clicked.connect(self.stop_cracking)
         self.stop_btn.setEnabled(False)
+        self.stop_btn.setFixedWidth(120)  # 固定按钮宽度
         
+        # 修改按钮布局，添加弹性空间使按钮靠右对齐
+        button_layout.addStretch(1)  # 添加弹性空间使按钮靠右对齐
         button_layout.addWidget(self.parse_btn)
         button_layout.addWidget(self.start_btn)
         button_layout.addWidget(self.stop_btn)
