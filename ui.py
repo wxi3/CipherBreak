@@ -25,7 +25,7 @@ class LoginCrackerApp(QMainWindow):
         self.setup_context_menus()
         
     def initUI(self):
-        self.setWindowTitle('CipherBreak by:t00ls.Com')
+        self.setWindowTitle('CipherBreak By:t00ls.Com')
         self.setGeometry(100, 100, 1200, 800)  # 增大窗口尺寸
         self.setStyleSheet("""
             QMainWindow {
