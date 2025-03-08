@@ -1,0 +1,4 @@
+PyQt5==5.15.9
+requests==2.31.0
+ddddocr==1.4.8
+onnxruntime==1.12.0
